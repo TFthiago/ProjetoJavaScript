@@ -1,6 +1,7 @@
 //const { expect } = require("chai");
 const supertest = require("supertest");
 //const assert = require("chai").assert;
+import {assert} from "chai";
 
 let petId = 4879531;
 let petName = "Radahn";
@@ -20,10 +21,10 @@ describe('Petstore Swagger - pet', () => {
                 expect(resp.body.id).toBe(petId)
                 ;
 
-                //assert.equal(resp.statusCode, 200)
-                //assert.equal(resp.body.id, petId)
-                //assert.equal(resp.body.name, petName)
-                //assert.equal(resp.body.status, petStatus)
+                assert.equal(resp.statusCode, 200)
+                assert.equal(resp.body.id, petId)
+                assert.equal(resp.body.name, petName)
+                assert.equal(resp.body.status, petStatus)
             });
         
     });

@@ -1,20 +1,22 @@
 const calculadora = require("../../src/calculadora.js");
+import {assert} from "chai";
 
 test('somar 5 + 4', () => {
     const numA = 5
     const numB = 4
-    resultadoEsperado = 9
+    const resultadoEsperado = 9
     
     const somarDoisNumeros = calculadora.somarDoisNumeros
     const resultadoAtual = calculadora.somarDoisNumeros(numA, numB)
 
-    expect(resultadoAtual).toEqual(resultadoEsperado)
+    //expect(resultadoAtual).toEqual(resultadoEsperado);
+    assert.equal(resultadoAtual,resultadoEsperado);
 })
 
 test('subtrair 10 - 5', () => {
     const numA = 10
     const numB = 5
-    resultadoEsperado = 5
+    const resultadoEsperado = 5
 
     const subtrairDoisNumeros = calculadora.subtrairDoisNumeros
     const resultadoAtual = subtrairDoisNumeros(numA, numB)
@@ -25,7 +27,7 @@ test('subtrair 10 - 5', () => {
 test('multiplicar 2 * 4', () => {
     const numA = 2
     const numB = 4
-    resultadoEsperado = 8
+    const resultadoEsperado = 8
 
     const multiplicarDoisNumeros = calculadora.multiplicarDoisNumeros
     const resultadoAtual = multiplicarDoisNumeros(numA, numB)
@@ -36,7 +38,7 @@ test('multiplicar 2 * 4', () => {
 test('dividir 20 / 4', () => {
     const numA = 20
     const numB = 4
-    resultadoEsperado = 5
+    const resultadoEsperado = 5
 
     const DividirDoisNumeros = calculadora.dividirDoisNumeros
     expect(calculadora.dividirDoisNumeros(numA, numB)).toBe(resultadoEsperado)

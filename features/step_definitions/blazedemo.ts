@@ -2,10 +2,10 @@
     import {Builder} from "selenium-webdriver";
     import HomePage = require("../../pageObjects/HomePage");
     //import {expect} from '@jest/globals';
-    //import {assert} from "chai";
+    import {assert} from "chai";
     //const assert = require("chai").assert
     //const assert = require('assert')
-    import assert from "assert";
+    //import assert from "assert";
 
     Before(async function () {
       this.driver = await new Builder()

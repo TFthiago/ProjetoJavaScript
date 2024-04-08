@@ -1,5 +1,6 @@
 const { Builder , By } = require("selenium-webdriver");
-const { assert } = require("assert");
+//const { assert } = require("assert");
+import {assert} from "chai";
 
 describe('Blazedemo por programação', () => {
     let driver;
@@ -21,6 +22,6 @@ describe('Blazedemo por programação', () => {
         await driver.findElement(By.css("[class = 'btn btn-primary']")).click();
         await expect(driver.getTitle()).resolves.toBe("BlazeDemo - reserve");
         await expect(driver.findElement(By.css("div h3")).getText()).resolves.toBe("Flights from Portland to Rome:");
-
+        
     })
 })
