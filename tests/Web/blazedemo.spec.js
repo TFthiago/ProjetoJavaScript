@@ -1,13 +1,11 @@
-const { Builder , By } = require("selenium-webdriver");
-//const { assert } = require("assert");
-import {assert} from "chai";
+const { Builder , By, Browser } = require("selenium-webdriver");
 
 describe('Blazedemo por programação', () => {
     let driver;
     let url = "https://blazedemo.com";
 
     beforeEach(async function() {
-        driver = await new Builder().forBrowser("chrome").build();
+        driver = await new Builder().forBrowser(Browser.CHROME).build();
         await driver.manage().setTimeouts({implicit: 30000});
     })
 

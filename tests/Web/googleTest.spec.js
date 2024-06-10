@@ -1,7 +1,4 @@
-
-//import { assert } from 'chai';
-//import 'chai/register-assert';
-const { Builder, By} = require("selenium-webdriver");
+const { Builder, By, Browser} = require("selenium-webdriver");
 
 describe('Google', () => {
     let driver;
@@ -10,12 +7,12 @@ describe('Google', () => {
 
     beforeEach(() => {
         driver = new Builder()
-        .forBrowser("chrome")
-        .build()
+        .forBrowser(Browser.FIREFOX)
+        .build();
     })
 
     afterEach(() => {
-        driver.quit()
+        driver.quit();
     })
 
     it('Consultar Google', async() => {
@@ -24,7 +21,7 @@ describe('Google', () => {
         await driver.findElement(By.name("q")).sendKeys("mousse de chocolate");
         await driver.findElement(By.css("input[value = 'Pesquisa Google']")).click();
 
-        await expect(driver.getTitle()).resolves.toBe("mousse de chocolate - Pesquisa Google")
+        await expect(driver.getTitle()).resolves.toBe("mousse de chocolate - Pesquisa Google");
         
     });
 });
