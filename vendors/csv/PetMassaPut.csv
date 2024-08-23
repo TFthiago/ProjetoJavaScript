@@ -1,0 +1,4 @@
+petId, categoryId, categoryName, petName, tagsId, tagsName, status
+3486671, 1, 'dog', 'Ferdinand', 12, 'Zwergspitz', 'sold'
+3486672, 2, 'cat', 'Tom', 5, 'Persian', 'sold'
+3486673, 1, 'dog', 'Viserys', 10, 'Dachshund', 'sold'

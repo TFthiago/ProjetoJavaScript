@@ -11,7 +11,7 @@ describe('Petstore Swagger - Teste CRUD - pet', () => {
 
     it ('POST pet', () => {
 
-        const jsonBody = require("../../vendors/pet1.json");
+        const jsonBody = require("../../vendors/json/pet1.json");
         return request
             .post("/pet")
             .send(jsonBody)
@@ -43,7 +43,7 @@ describe('Petstore Swagger - Teste CRUD - pet', () => {
 
     it('PUT pet', () => {
         
-        const jsonBody = require("../../vendors/pet1 PUT.json");
+        const jsonBody = require("../../vendors/json/pet1 PUT.json");
         return request
             .put("/pet")
             .send(jsonBody)

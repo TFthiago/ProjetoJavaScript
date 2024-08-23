@@ -9,7 +9,7 @@ describe('Petstore Swagger - Teste CRUD - User', () => {
     let password = "123987";
 
     it('POST user', () => {
-        const jsonBody = require("../../vendors/user1.json");
+        const jsonBody = require("../../vendors/json/user1.json");
         
             return request
                 .post("/user")
@@ -36,7 +36,7 @@ describe('Petstore Swagger - Teste CRUD - User', () => {
     });
 
     it('PUT user', () => {
-        const jsonBody = require("../../vendors/user1 PUT.json");
+        const jsonBody = require("../../vendors/json/user1 PUT.json");
         return request
             .put("/user/" + username)
             .send(jsonBody)
